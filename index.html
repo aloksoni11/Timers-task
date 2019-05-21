@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Timer </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+        
+        .main {
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            transition: all;
+            transition-duration: 0.8s;
+        }
+        
+        .child {
+            height: 500px;
+            /*            background-color: orange;*/
+            width: 100%;
+        }
+        
+        .borderr {
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 1px 1px 11px 2px #524f4fb0;
+        }
+        
+        span {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="ma">
+        <div class="container h-100 ">
+            <div class="row h-100 align-items-center">
+                <div class="col-md-3">
+                    <div class="child text-center">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/hA6hldpSTF8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="borderr"></iframe>
+                    </div><span>Work 1</span> </div>
+                <div class="col-md-3 text-center">
+                    <div class="child align-items-center d-flex">
+                        <iframe width="100%" height="90%" src="https://www.youtube.com/embed/Nt9L1jCKGnE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="borderr"></iframe>
+                    </div> <span>Work 1</span> </div>
+                <div class="col-md-3 text-center">
+                    <div class="child align-items-center d-flex">
+                        <iframe width="100%" height="80%" src="https://www.youtube.com/embed/xy62MyYWnU4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="borderr"></iframe>
+                    </div> <span>Work 1</span> </div>
+                <div class="col-md-3 text-center">
+                    <div class="child align-items-center d-flex">
+                        <iframe width="100%" height="70%" src="https://www.youtube.com/embed/_6Ix1VF_yWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="borderr"></iframe>
+                    </div><span>Work 1</span> </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function background() {
+            myArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+            var z = document.getElementById("ma");
+            var i = parseInt(Math.random() * (myArray.length - 1));
+            var x = myArray[i];
+            //            alert(Math.random());
+            z.style.backgroundImage = "url(images/" + x + ".jpg)";
+            window.setTimeout(background, 2000);
+        }
+        background();
+    </script>
+</body>
+
+</html>
